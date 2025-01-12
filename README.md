@@ -3,7 +3,9 @@
 O objetivo deste projeto é simular um desafio de um 
 processo seletivo para desenvolvedor java _backend_.
 Assim, é proposto um desafio que deverá ser cumprido
-em um determinado número de dias.
+em um determinado número de dias conforme especifica
+o curso **Backend COMPLETO com Java - APIRestFull e 
+Microsserviços**.
 
 ## Desafio
 
@@ -14,8 +16,8 @@ os seguinte critérios abaixo.
 
 + Deve ser possível efetuar um CRUD de um produto.
 
-    - **Produto:** id, quantidade estoque, valor custo,
-    valor venda, data de cadastro, observação.
+    - **Produto:** id, nome, quantidade estoque, valor
+    custo, valor venda, data de cadastro, observação.
 
 + Deve ser possível efetuar um CRUD de cliente.
 
