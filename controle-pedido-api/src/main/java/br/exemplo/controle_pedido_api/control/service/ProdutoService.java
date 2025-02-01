@@ -33,6 +33,14 @@ public class ProdutoService {
         return Optional.empty();
     }
 
+
+    public List<ProdutoDTO> insertAll(List<ProdutoDTO> dtos) {
+        ModelMapper mapper = new ModelMapper();
+        List<ProdutoEntity> entities = dtos.stream().map(dto -> mapper.map(dto, ProdutoEntity.class)).toList();
+        entities = repository.saveAll(entities);
+        return entities.stream().map(entity -> mapper.map(entity, ProdutoDTO.class)).toList();
+    }
+
     public ProdutoDTO insert(ProdutoDTO dto) {
         dto.setDtCadastro(new Date());
         ProdutoEntity entity = new ModelMapper().map(dto, ProdutoEntity.class);
